@@ -42,6 +42,7 @@ def ask_read_blog():
 
     print_posts(blogs[title])
 
+
 def print_posts(blog):
     for post in blog.posts:
         print(f'''
@@ -50,5 +51,10 @@ def print_posts(blog):
         
         ''')
 
+
 def ask_create_post():
-    pass
+    blog_name = input('Enter the blog that you want to write a post in: ')
+    title = input('Enter your post title: ')
+    content = input('Enter your post content: ')
+
+    blogs[blog_name].create_post(title, content)
